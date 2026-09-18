@@ -15,6 +15,7 @@ h1 {
   margin: 0 auto 1%;
   border: solid;
   box-sizing: border-box;
+  touch-action: none; /* Prevents scrolling while drawing on the grid */
 }
 
 :root {
