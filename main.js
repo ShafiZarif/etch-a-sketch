@@ -9,7 +9,7 @@ for (let i = 0; i < 16 * 16; i++) {
 
 // main.js — replace the mouseover handler from Commit 4
 
-container.addEventListener('mouseover', (e) => {
+container.addEventListener('pointermove', (e) => {
   if (e.target.classList.contains('col')) {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
