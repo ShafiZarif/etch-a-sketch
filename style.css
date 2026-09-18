@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vmin;
+  height: 90vmin;
+  margin: 0 auto 1%;
+  border: solid;
+  box-sizing: border-box;
+}
+
+:root {
+  --cell-size: 6.25%; /* 100 ÷ 16 — default 16×16 grid */
+}
+
+.col {
+  flex-basis: var(--cell-size);
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+}
