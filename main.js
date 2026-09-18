@@ -45,3 +45,14 @@ button.addEventListener('click', () => {
     container.appendChild(cell);
   }
 });
+
+// main.js — replace the mouseover handler from Commit 4
+
+container.addEventListener('mouseover', (e) => {
+  if (e.target.classList.contains('col')) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  }
+});
