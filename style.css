@@ -1,6 +1,15 @@
 body {
   display: flex;
   flex-direction: column;
+
+  /* Disable selection and long-press menu */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* The missing piece for iOS long-press menus */
+  -webkit-touch-callout: none;
 }
 
 h1 {
