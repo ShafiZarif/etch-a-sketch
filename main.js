@@ -7,11 +7,14 @@ for (let i = 0; i < 16 * 16; i++) {
   container.appendChild(cell);
 }
 
-// main.js (continued)
+// main.js — replace the mouseover handler from Commit 4
 
 container.addEventListener('mouseover', (e) => {
   if (e.target.classList.contains('col')) {
-    e.target.style.backgroundColor = 'black';
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
 });
 
@@ -20,7 +23,7 @@ container.addEventListener('mouseover', (e) => {
 const button = document.getElementById('btn-gradient');
 
 button.addEventListener('click', () => {
-  const raw = prompt('How many squares per side? (1–100)');
+  const raw = prompt('How many squares per side? (1-100)');
 
   // Cancelled
   if (raw === null) return;
@@ -43,16 +46,5 @@ button.addEventListener('click', () => {
     const cell = document.createElement('div');
     cell.classList.add('col');
     container.appendChild(cell);
-  }
-});
-
-// main.js — replace the mouseover handler from Commit 4
-
-container.addEventListener('mouseover', (e) => {
-  if (e.target.classList.contains('col')) {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
 });
