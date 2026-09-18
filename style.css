@@ -26,3 +26,24 @@ h1 {
   aspect-ratio: 1 / 1;
   box-sizing: border-box;
 }
+
+#btn-gradient {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  width: 196px;
+  align-self: center;
+}
+
+#btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.9);
+}
