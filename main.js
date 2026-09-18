@@ -16,6 +16,11 @@ container.addEventListener('mouseover', (e) => {
     const b = Math.floor(Math.random() * 256);
     e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
   }
+  // Progressive darkening: 10% per hover, capped at 10
+  const count = Number(cell.dataset.hovers) || 0;
+  const next = Math.min(count + 1, 10);
+  cell.dataset.hovers = next;
+  cell.style.opacity = next / 10;
 });
 
 // main.js (continued)
